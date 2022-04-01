@@ -28,7 +28,7 @@ class UnetBase(nn.Module):
         # output
         self.final = self.final_block(in_channels=32, mid_channels=16, out_channels=out_channels)
 
-    def _forward_unimplemented(self, *input: Any) -> None:
+    def _forward_unimplemented(self, *input: Any) -> torch.Tensor:
         """
         Encode
         @param x:

@@ -9,7 +9,6 @@ Unet系列图像语义分割，不断增加新的模型
 - [x] Resnet的残差结构结合Unet
 - [x] Attention机制cbam结合Unet
 - [x] Mobile net v2 的深度可分离卷积结合Unet
-- [x] Atention机制cbam结合Unet
 - [x] Shuffle net v2的技巧的结合Unet
 
 ### NOTE：
