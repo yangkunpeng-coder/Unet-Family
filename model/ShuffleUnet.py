@@ -4,7 +4,7 @@ import torch
 
 class ShuffleUnet(UnetBase):
     """
-    深度可分离卷积模块结合Unet，在保证准确率的前提下，减少参数量
+    结合通道洗牌操作的卷积模块结合Unet，在保证准确率的前提下，减少参数量
     """
 
     def __init__(self, in_channel, out_channels):
