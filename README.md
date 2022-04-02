@@ -21,6 +21,8 @@ Unet系列图像语义分割，不断增加新的模型
 
 **✅**Focal Loss
 
+✅Focal Tversky Loss
+
 #### NOTE：
 
 Unet系列算法使用设计模式“模板方法”，子类继承自基类UnetBase，子类实现虚函数构建基本函数块。
