@@ -7,13 +7,13 @@ import torch
 import torch.nn as nn
 
 
-class DiceLoss(LossBase):
+class BCEDiceLoss(LossBase):
     """
     Dice Loss with bec_weight
     """
 
     def __init__(self):
-        super(DiceLoss, self).__init__()
+        super(BCEDiceLoss, self).__init__()
 
     @staticmethod
     def __dice_loss(prediction: Tensor, target: Tensor) -> Tensor:
@@ -34,6 +34,6 @@ class DiceLoss(LossBase):
         """
         bce = F.binary_cross_entropy_with_logits(prediction, target)
         prediction = F.sigmoid(prediction)
-        dice = DiceLoss.__dice_loss(prediction, target)
+        dice = BCEDiceLoss.__dice_loss(prediction, target)
         loss = bce * bce_weight + dice * (1 - bce_weight)
         return loss
